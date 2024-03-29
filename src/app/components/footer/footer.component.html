@@ -1,4 +1,4 @@
-<div class="py-4 px-4 mx-0 mt-8 lg:mx-8">
+<div class="footer-container py-4 px-4 mx-0 mt-8 lg:mx-8">
   <div class="grid justify-content-between">
     <div class="col-12 md:col-2" style="margin-top: -1.5rem;">
       <a
@@ -22,75 +22,46 @@
 
     <div class="col-12 md:col-10 lg:col-7">
       <div class="grid text-center md:text-left">
-        <div class="col-12 md:col-3">
-          <h4 class="font-medium text-2xl line-height-3 mb-3 text-900">
-            Company
-          </h4>
-          <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">
+        <div class="col-12">
+          <span
+            class="about-us-title font-medium text-2xl line-height-3 mb-3 text-900"
+          >
             About Us
-          </a>
-          <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">
-            News
-          </a>
-          <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">
-            Investor Relations
-          </a>
-          <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">
-            Careers
-          </a>
-          <a class="line-height-3 text-xl block cursor-pointer text-700">
-            Media Kit
-          </a>
+          </span>
         </div>
 
-        <div class="col-12 md:col-3 mt-4 md:mt-0">
-          <h4 class="font-medium text-2xl line-height-3 mb-3 text-900">
-            Resources
-          </h4>
-          <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">
-            Get Started
-          </a>
-          <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">
-            Learn
-          </a>
-          <a class="line-height-3 text-xl block cursor-pointer text-700">
-            Case Studies
-          </a>
+        <div>
+          <app-footer-list-item icon="pi-envelope">
+            <span
+              class="footer-item-content"
+              [innerHTML]="'admin@admin.com'"
+            ></span>
+          </app-footer-list-item>
+          <app-footer-list-item icon="pi-whatsapp">
+            <a
+              class="footer-item-content"
+              href="https://wa.me/917016770218"
+              target="_blank"
+            >
+              +91-7016770218
+            </a>
+          </app-footer-list-item>
+          <app-footer-list-item icon="pi-map-marker">
+            <span class="footer-item-content">
+              702, 7th Floor, Yash Aqua, Above Mcdonalds, Vijay Cross road,
+              Ahmedabad 380009
+            </span>
+          </app-footer-list-item>
         </div>
-
-        <div class="col-12 md:col-3 mt-4 md:mt-0">
-          <h4 class="font-medium text-2xl line-height-3 mb-3 text-900">
-            Community
-          </h4>
-          <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">
-            Discord
-          </a>
-          <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">
-            Events
-            <img src="assets/demo/images/landing/new-badge.svg" class="ml-2" />
-          </a>
-          <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">
-            FAQ
-          </a>
-          <a class="line-height-3 text-xl block cursor-pointer text-700">
-            Blog
-          </a>
-        </div>
-
-        <div class="col-12 md:col-3 mt-4 md:mt-0">
-          <h4 class="font-medium text-2xl line-height-3 mb-3 text-900">
-            Legal
-          </h4>
-          <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">
-            Brand Policy
-          </a>
-          <a class="line-height-3 text-xl block cursor-pointer mb-2 text-700">
-            Privacy Policy
-          </a>
-          <a class="line-height-3 text-xl block cursor-pointer text-700">
-            Terms of Service
-          </a>
-        </div>
+      </div>
+      <div
+        class="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0"
+      >
+        <button
+          pButton
+          label="Contact Us"
+          class="p-button-text p-button-rounded border-none font-light line-height-2 text-blue-500"
+        ></button>
       </div>
     </div>
   </div>

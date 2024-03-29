@@ -5,18 +5,14 @@
         (click)="router.navigate(['/pages/landing'], { fragment: 'home' })"
         class="flex flex-wrap align-items-center justify-content-center md:justify-content-start md:mb-0 mb-3 cursor-pointer"
       >
+      <a class="flex align-items-center" href="#">
         <img
-          src="assets/layout/images/{{
-            layoutService.config().colorScheme === 'light'
-              ? 'logo-dark'
-              : 'logo-white'
-          }}.svg"
-          alt="footer sections"
-          width="50"
-          height="50"
-          class="mr-2"
+          src="assets/logos/dba_logo.jpg"
+          alt="Digital Business Academy Logo"
+          height="80"
+          class="mr-0 lg:mr-2"
         />
-        <h4 class="font-medium text-3xl text-900">SAKAI</h4>
+      </a>
       </a>
     </div>
 

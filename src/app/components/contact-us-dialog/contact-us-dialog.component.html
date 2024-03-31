@@ -70,13 +70,23 @@
           formControlName="message"
         ></textarea>
       </div>
-      <button
-        pButton
-        class="submit-btn"
-        [disabled]="!contactUsForm.valid"
-        label="Submit"
-        (click)="submit()"
-      ></button>
+      <div class="btn-container">
+        <button
+          pButton
+          class="submit-btn"
+          [disabled]="!contactUsForm.valid"
+          label="Submit"
+          (click)="submit()"
+          size="small"
+        ></button>
+        <button
+          pButton
+          class="submit-btn"
+          label="Cancel"
+          (click)="cancel()"
+          size="small"
+        ></button>
+      </div>
     </div>
   </form>
 </p-dialog>

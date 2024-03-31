@@ -11,13 +11,17 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
-.submit-btn {
-    background-color: #001a54d6 !important;
-    width: 16%;
-    // float: right;
-    border-color:#001a54d6;
-    // margin-bottom: 2rem;
+.btn-container {
+    display: flex;
+    flex-direction: row-reverse;
+    .submit-btn {
+        background-color: #001a54d6 !important;
+        max-width: fit-content;
+        border-color: #001a54d6;
+        margin-left: 5px;
+    }
 }
-.p-inputtext:enabled:hover{
-    border-color:#001a54d6;
+
+.p-inputtext:enabled:hover {
+    border-color: #001a54d6;
 }

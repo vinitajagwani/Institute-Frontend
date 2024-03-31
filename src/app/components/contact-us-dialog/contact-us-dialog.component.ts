@@ -71,4 +71,9 @@ export class ContactUsDialogComponent {
         this.isVisible = false;
         this.visibleChange.emit(false);
     }
+
+    cancel() {
+        this.isVisible = false;
+        this.visibleChange.emit(false);
+    }
 }

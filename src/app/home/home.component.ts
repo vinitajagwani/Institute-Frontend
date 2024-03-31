@@ -9,6 +9,7 @@ import { PanelModule } from 'primeng/panel';
 import { StyleClassModule } from 'primeng/styleclass';
 import { LandingRoutingModule } from '../demo/components/landing/landing-routing.module';
 import { FooterComponent } from '../components/footer/footer.component';
+import { ContactUsDialogComponent } from '../components/contact-us-dialog/contact-us-dialog.component';
 
 @Component({
     selector: 'app-home',
@@ -22,6 +23,7 @@ import { FooterComponent } from '../components/footer/footer.component';
         PanelModule,
         ButtonModule,
         FooterComponent,
+        ContactUsDialogComponent,
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',
@@ -29,4 +31,6 @@ import { FooterComponent } from '../components/footer/footer.component';
 export class HomeComponent {
     layoutService = inject(LayoutService);
     router = inject(Router);
+
+    isContactUsVisible = false;
 }

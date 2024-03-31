@@ -82,6 +82,7 @@
             pRipple
             label="Contact Us"
             class="p-button-text p-button-rounded border-none font-light line-height-2 text-blue-500"
+            (click)="isContactUsVisible = true"
           ></button>
           <!-- <button pButton pRipple label="Register" class="p-button-rounded border-none ml-5 font-light line-height-2 bg-blue-500 text-white"></button> -->
         </div>
@@ -692,3 +693,8 @@
     <app-footer />
   </div>
 </div>
+
+<!-- Contact us dialog -->
+@if(isContactUsVisible) {
+    <app-contact-us-dialog [isVisible]="isContactUsVisible" (visibleChange)="isContactUsVisible = $event"></app-contact-us-dialog>
+}

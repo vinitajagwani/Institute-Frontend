@@ -1,0 +1,82 @@
+<p-dialog
+  header="Contact Us"
+  [visible]="isVisible"
+  [breakpoints]="{ '960px': '75vw' }"
+  [style]="{ width: '50vw' }"
+  [draggable]="false"
+  [resizable]="false"
+  (visibleChange)="visibleChange.emit($event)"
+>
+  <form [formGroup]="contactUsForm">
+    <div class="card p-fluid">
+      <div class="field">
+        <label htmlFor="fullName">
+          Full Name
+          <span class="required">*</span>
+        </label>
+        <input
+          pInputText
+          id="fullName"
+          type="text"
+          formControlName="fullName"
+        />
+        @if(isInvalid('fullName','touched') && isInvalid('fullName','invalid')){
+        <span class="required">Please enter your full name.</span>
+        }
+      </div>
+
+      <div class="field">
+        <label htmlFor="contactNo">
+          Contact No
+          <span class="required">*</span>
+        </label>
+        <input
+          pInputText
+          id="contactNo"
+          type="number"
+          formControlName="contactNo"
+        />
+        @if(!contactUsForm.controls['contactNo'].value &&
+        isInvalid('contactNo','touched')) {
+        <span class="required">Please enter contact no.</span>
+        } @else if(isInvalid('contactNo','touched') &&
+        isInvalid('contactNo','invalid')){
+        <span class="required">Invalid contact no.</span>
+        }
+      </div>
+
+      <div class="field">
+        <label htmlFor="email">
+          Email
+          <span class="required">*</span>
+        </label>
+        <input pInputText id="email" type="text" formControlName="email" />
+        @if(!contactUsForm.controls['email'].value &&
+        isInvalid('email','touched')) {
+        <span class="required">Please enter email.</span>
+        } @else if(isInvalid('email','touched') &&
+        isInvalid('email','invalid')){
+        <span class="required">Please enter valid email.</span>
+        }
+      </div>
+
+      <div class="field">
+        <label htmlFor="message">Message</label>
+        <textarea
+          rows="2"
+          cols="30"
+          pInputTextarea
+          id="message"
+          formControlName="message"
+        ></textarea>
+      </div>
+      <button
+        pButton
+        class="submit-btn"
+        [disabled]="!contactUsForm.valid"
+        label="Submit"
+        (click)="submit()"
+      ></button>
+    </div>
+  </form>
+</p-dialog>

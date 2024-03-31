@@ -12,5 +12,12 @@ input[type="number"] {
 }
 
 .submit-btn {
-    background-color: var(--blue-500) !important;
+    background-color: #001a54d6 !important;
+    width: 16%;
+    // float: right;
+    border-color:#001a54d6;
+    // margin-bottom: 2rem;
+}
+.p-inputtext:enabled:hover{
+    border-color:#001a54d6;
 }

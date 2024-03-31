@@ -1,28 +1,12 @@
 <div class="footer-container py-4 px-4 mx-0 mt-8 lg:mx-8">
   <div class="grid justify-content-between">
-    <div class="col-12 md:col-2" style="margin-top: -1.5rem;">
-      <a
-        (click)="router.navigate(['/pages/landing'], { fragment: 'home' })"
-        class="flex flex-wrap align-items-center justify-content-center md:justify-content-start md:mb-0 mb-3 cursor-pointer"
-      >
-        <a class="flex align-items-center" href="#">
-          <img
-            src="assets/logos/dba_logo.jpg"
-            alt="Digital Business Academy Logo"
-            height="80"
-            class="mr-0 lg:mr-2"
-          />
-        </a>
-      </a>
-    </div>
-
-    <div class="col-12 md:col-10 lg:col-7">
+    <div class="col-12 md:col-6">
       <div class="grid text-center md:text-left">
         <div class="col-12">
           <span
-            class="about-us-title font-medium text-2xl line-height-3 mb-3 text-900"
+            class="about-us-title font-medium text-2xl line-height-3 mb-3 text-900" style="color: white !important;"
           >
-            About Us
+            Contact Us
           </span>
         </div>
 
@@ -35,11 +19,87 @@
           </app-footer-list-item>
           <app-footer-list-item icon="pi-whatsapp">
             <a
+            class="footer-item-content"
+            href="https://wa.me/919227009944"
+            target="_blank"
+          >
+            +91 9227009944
+            </a>
+          </app-footer-list-item>
+          <app-footer-list-item icon="pi-map-marker">
+            <span class="footer-item-content">
+              702, 7th Floor, Yash Aqua, Above Mcdonalds, Vijay Cross road,
+              Ahmedabad 380009
+            </span>
+          </app-footer-list-item>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 md:col-6">
+      <div class="grid text-center md:text-left">
+        <div class="col-12">
+          <span
+            class="about-us-title font-medium text-2xl line-height-3 mb-3 text-900"  style="color: white !important;"
+          >
+            About Us
+          </span>
+        </div>
+
+        <div>
+          <ul>
+            <li>About DBA</li>
+            <li>Our Founder</li>
+            <li>Our Team</li>
+          </ul>
+          <!-- <app-footer-list-item icon="pi-envelope">
+            <span
               class="footer-item-content"
-              href="https://wa.me/917016770218"
-              target="_blank"
-            >
-              +91-7016770218
+              [innerHTML]="'admin@admin.com'"
+            ></span>
+          </app-footer-list-item>
+          <app-footer-list-item icon="pi-whatsapp">
+            <a
+            class="footer-item-content"
+            href="https://wa.me/919227009944"
+            target="_blank"
+          >
+            +91 9227009944
+            </a>
+          </app-footer-list-item>
+          <app-footer-list-item icon="pi-map-marker">
+            <span class="footer-item-content">
+              702, 7th Floor, Yash Aqua, Above Mcdonalds, Vijay Cross road,
+              Ahmedabad 380009
+            </span>
+          </app-footer-list-item> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="col-12 md:col-10 lg:col-7">
+      <div class="grid text-center md:text-left">
+        <div class="col-12">
+          <span
+            class="about-us-title font-medium text-2xl line-height-3 mb-3 text-900"
+          >
+            Contact Us
+          </span>
+        </div>
+
+        <div>
+          <app-footer-list-item icon="pi-envelope">
+            <span
+              class="footer-item-content"
+              [innerHTML]="'admin@admin.com'"
+            ></span>
+          </app-footer-list-item>
+          <app-footer-list-item icon="pi-whatsapp">
+            <a
+            class="footer-item-content"
+            href="https://wa.me/919227009944"
+            target="_blank"
+          >
+            +91 9227009944
             </a>
           </app-footer-list-item>
           <app-footer-list-item icon="pi-map-marker">
@@ -53,13 +113,14 @@
       <div
         class="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0"
       >
+
         <button
           pButton
           label="Contact Us"
-          class="p-button-text p-button-rounded border-none font-light line-height-2 text-blue-500"
+          class="border-none font-light line-height-2 theme-button ml-5"
           (click)="openContactUsDialog.emit()"
         ></button>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>

@@ -1,4 +1,23 @@
 .theme-button{
-    background-color: #52aeef !important;
+    background-color: #001a54d6 !important;
     font-weight: normal !important;
+    font-size: 20px;
+}
+
+.header{
+    margin-top: -1rem !important;
+    margin-bottom: -3rem !important;
+}
+
+.card{
+    height: 300px;
+    max-height: 300px;
+}
+
+span, .p-button-label{
+    font-size: 20px;
+}
+
+li{
+    color: white;
 }

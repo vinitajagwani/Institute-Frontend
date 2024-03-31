@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
 import { FooterIconWrapperComponent } from './footer-icon-wrapper/footer-icon-wrapper.component';
@@ -23,4 +23,5 @@ import { FooterListItemComponent } from './footer-list-item/footer-list-item.com
 export class FooterComponent {
     layoutService = inject(LayoutService);
     router = inject(Router);
+    @Output() openContactUsDialog = new EventEmitter<void>();
 }

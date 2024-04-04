@@ -14,6 +14,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { SidebarModule } from 'primeng/sidebar';
+import emailjs from '@emailjs/browser';
 
 @Component({
     selector: 'app-contact-us-dialog',
@@ -68,6 +69,12 @@ export class ContactUsDialogComponent {
 
     submit() {
         if (!this.contactUsForm.valid) return;
+        emailjs.init('e5gRhUefYYNsjaqd2');
+        emailjs.send('service_h7ixb4t', 'template_7t3mdam', {
+            from_name: 'Shivam',
+            to_email: this.contactUsForm.value.email,
+        });
+
         this.isVisible = false;
         this.visibleChange.emit(false);
     }

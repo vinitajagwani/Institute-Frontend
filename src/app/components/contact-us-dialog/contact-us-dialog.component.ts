@@ -41,6 +41,8 @@ export class ContactUsDialogComponent {
 
     @Output() visibleChange = new EventEmitter();
 
+    isSendingEmail = false;
+
     contactUsForm = this._fb.group({
         fullName: new FormControl('', [Validators.required]),
         contactNo: new FormControl(null, [
@@ -69,14 +71,22 @@ export class ContactUsDialogComponent {
 
     submit() {
         if (!this.contactUsForm.valid) return;
+        this.isSendingEmail = true;
         emailjs.init('e5gRhUefYYNsjaqd2');
-        emailjs.send('service_h7ixb4t', 'template_7t3mdam', {
-            from_name: 'Shivam',
-            to_email: this.contactUsForm.value.email,
-        });
-
-        this.isVisible = false;
-        this.visibleChange.emit(false);
+        emailjs
+            .send('service_h7ixb4t', 'template_7t3mdam', {
+                from_name: 'Shivam',
+                to_email: this.contactUsForm.value.email,
+            })
+            .then(() => {
+                this.isSendingEmail = false;
+                this.isVisible = false;
+                this.visibleChange.emit(false);
+            })
+            .catch(() => {
+                // TODO: Show error message
+                this.isSendingEmail = false;
+            });
     }
 
     cancel() {

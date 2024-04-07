@@ -75,6 +75,7 @@
           pButton
           class="submit-btn"
           [disabled]="!contactUsForm.valid"
+          [loading]="isSendingEmail"
           label="Submit"
           (click)="submit()"
           size="small"

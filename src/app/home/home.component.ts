@@ -10,6 +10,7 @@ import { StyleClassModule } from 'primeng/styleclass';
 import { LandingRoutingModule } from '../demo/components/landing/landing-routing.module';
 import { FooterComponent } from '../components/footer/footer.component';
 import { ContactUsDialogComponent } from '../components/contact-us-dialog/contact-us-dialog.component';
+import { EmailService } from '../email.service';
 
 @Component({
     selector: 'app-home',
@@ -33,4 +34,11 @@ export class HomeComponent {
     router = inject(Router);
 
     isContactUsVisible = false;
+
+    constructor(private emailService: EmailService){
+
+    }
+    sendEmail() {
+        this.emailService.sendEmail()
+      }
 }

@@ -75,8 +75,11 @@ export class ContactUsDialogComponent {
         emailjs.init('e5gRhUefYYNsjaqd2');
         emailjs
             .send('service_h7ixb4t', 'template_7t3mdam', {
-                from_name: 'Shivam',
                 to_email: this.contactUsForm.value.email,
+                from_email: this.contactUsForm.value.email,
+                from_name: this.contactUsForm.value.fullName,
+                from_phone: this.contactUsForm.value.contactNo,
+                message: this.contactUsForm.value.message,
             })
             .then(() => {
                 this.isSendingEmail = false;
@@ -84,7 +87,6 @@ export class ContactUsDialogComponent {
                 this.visibleChange.emit(false);
             })
             .catch(() => {
-                // TODO: Show error message
                 this.isSendingEmail = false;
             });
     }
